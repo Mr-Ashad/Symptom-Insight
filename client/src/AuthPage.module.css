@@ -1,0 +1,133 @@
+/*
+*{
+    margin: 0;
+    padding :0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:white;
+}
+
+body{
+    margin:0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+    margin-left: 20px;
+    align-self: center;
+    width: 460px;
+    height: auto;
+    background: rgb(7, 7, 7);
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 10px;
+}
+
+.text1{
+    margin: 1.3em;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 400px;
+    height: 50px;
+    margin: 30px 5px 20px;
+}
+
+img{
+    position: absolute;
+    margin-left: 20px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    margin-left: 50px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+}
+
+.input-box input::placeholder{
+    padding-left: 4px;
+    color: #fff;
+}
+.forgot-password{
+    margin: 20px 26px;
+}
+.forgot-password span{
+    margin-left: 6px;
+    font-size: 14px;
+}
+
+.btnn {
+  margin: 17px 11em ;
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 2em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: 2.7em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) 2.3em;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.btnn:active {
+  border-color: #4a4a4a;
+  outline: 0;
+}
+
+.btnn:focus {
+  border-color: #485fc7;
+  outline: 0;
+}
+
+.btnn:hover {
+  border-color: #b5b5b5;
+}
+
+.btnn:focus:not(:active) {
+  box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+}
+
+.para{
+    margin: 20px ;
+    font-size: 13px;
+}
+*/
