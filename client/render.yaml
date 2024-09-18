@@ -1,2 +1,9 @@
 buildCommand: npm run build
 publishDir: build
+
+services:
+  - type: web
+    name: your-backend-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend:app
