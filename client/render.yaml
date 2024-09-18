@@ -1,9 +1,11 @@
-buildCommand: npm run build
-publishDir: build
-
 services:
   - type: web
     name: your-backend-service
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn -b 0.0.0.0:5000 app:app
+    buildCommand: |
+      python3 -m venv venv
+      source venv/bin/activate
+      pip install -r requirements.txt
+    startCommand: |
+      source venv/bin/activate
+      gunicorn -b 0.0.0.0:5000 app:app
