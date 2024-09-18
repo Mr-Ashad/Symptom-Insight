@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy the requirements file into the container
 COPY requirements.txt .
-
+RUN pip install --upgrade pip
 # Install the required Python packages
 RUN pip install -r requirements.txt
 
