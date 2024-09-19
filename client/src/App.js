@@ -60,7 +60,7 @@ function App() {
     }
     let descFetched = false
     try {
-      const descriptionResponse = await fetch('/description', {
+      const descriptionResponse = await fetch('https://ashad1.pythonanywhere.com//description', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function App() {
   
     if (!descFetched){
     try {
-      const response = await fetch('/predict', {
+      const response = await fetch('https://ashad1.pythonanywhere.com//predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
