@@ -27,7 +27,7 @@ Tokenization: The process of tokenization involves splitting the text into indiv
 ## Feature Extraction:
 Feature extraction involves transforming raw data into a set of features that can be used to train a machine learning model. In natural language processing (NLP), TF-IDF vectorization is a popular technique for feature extraction. TF-IDF assigns weights to words based on their frequency in individual documents and across the entire dataset. 
 
-# Model Training:
+## Model Training:
 Model training is the process of teaching a machine learning algorithm to recognize patterns and relationships within the data. In the provided code, an SVM (Support Vector Machine) classifier is trained using the TF-IDF transformed training dataset. SVM is a supervised learning algorithm used for classification tasks. During training, the SVM model learns to differentiate between different classes by finding the optimal hyperplane that maximally separates data points belonging to different classes in the feature space.
 
 ## Model Prediction:
