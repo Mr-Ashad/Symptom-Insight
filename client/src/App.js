@@ -22,6 +22,10 @@ function App() {
   // eslint-disable-next-line
   const [precautions, setPrecautions] = useState([]);
   const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([]);
+  const [hasGreeted, setHasGreeted] = useState(false);
+  const [hasGoodbye, setHasGoodbye] = useState(false);
+
 
   useEffect(() => {
     if (msgEndRef.current) {
@@ -52,12 +56,39 @@ function App() {
   const handleInputChange = (e) => {
     setInputData(e.target.value);
   };
+    // Function to check for greetings or goodbyes
+  const checkGreetingOrGoodbye = (input) => {
+  const greetings = ["hi", "hello", "hey", "greetings", "howdy"];
+  const goodbyes = ["bye", "goodbye", "see you", "take care", "farewell"];
+    
+  const lowerInput = input.toLowerCase();
 
+  if (greetings.some(greeting => lowerInput.includes(greeting))) {
+      return "Hello! Welcome to Symptom Insight! I'm here to help you with your symptoms.";
+    }
+
+  if (goodbyes.some(goodbye => lowerInput.includes(goodbye))) {
+      return "Thank you for using Symptom Insight! Goodbye for now! Take care of your health!";
+    }
+
+  return null; // No greeting or goodbye
+  };
   const handleSubmit = async () => {
     setInputClicked(true);
     if (inputData.trim() === '') {
       return;
     }
+    // Check for greetings or goodbyes
+    const greetingOrGoodbyeResponse = checkGreetingOrGoodbye(inputData);
+    if (greetingOrGoodbyeResponse) {
+      setMessages(prevMessages => [
+        ...prevMessages,
+        { text: greetingOrGoodbyeResponse, isBot: true }
+      ]);
+      setInputData('');
+      return; // Exit early if we have a greeting or goodbye
+    }
+    setMessages(prevMessages => [...prevMessages, { text: inputData, isBot: false }]);
     let descFetched = false
     try {
       const descriptionResponse = await fetch('https://ashad1.pythonanywhere.com//description', {
