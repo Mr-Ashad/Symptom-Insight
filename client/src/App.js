@@ -82,7 +82,8 @@ function App() {
     if (greetingOrGoodbyeResponse) {
       setMessages(prevMessages => [
         ...prevMessages,
-        { text: greetingOrGoodbyeResponse, isBot: true }
+        { text: greetingOrGoodbyeResponse, isBot: true },
+        { text: InputData, isBOt: false},
       ]);
       setInputData('');
       return; // Exit early if we have a greeting or goodbye
