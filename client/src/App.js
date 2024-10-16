@@ -223,7 +223,7 @@ function App() {
 
         <div className="footer">
           <div className="inp">
-            <input type="text" value={inputData} onKeyDown={handleEnter} onChange={handleInputChange} placeholder='Send a message' />
+            <input type="text" value={inputData} onKeyDown={handleEnter} onChange={handleInputChange} placeholder='Enter your symptoms' />
             <button className="send" onClick={() => { handleInputClick(); handleSubmit(); }} type='submit'><img src={sendbtn} alt="send" /></button>
           </div>
         </div>
