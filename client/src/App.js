@@ -22,7 +22,6 @@ function App() {
   // eslint-disable-next-line
   const [precautions, setPrecautions] = useState([]);
   const [messages, setMessages] = useState([]);
-  const [messages, setMessages] = useState([]);
   const [hasGreeted, setHasGreeted] = useState(false);
   const [hasGoodbye, setHasGoodbye] = useState(false);
 
